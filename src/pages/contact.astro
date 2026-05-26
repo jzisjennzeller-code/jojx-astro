@@ -1,0 +1,114 @@
+---
+// src/pages/contact.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact - JOJX" description="Get in touch with JOJX for commercial production inquiries.">
+  <Header />
+
+  <section class="py-20">
+    <div class="container">
+      <div class="max-w-2xl">
+        <!-- Title -->
+        <div class="mb-16">
+          <h1 class="text-5xl md:text-6xl font-bold uppercase mb-6">Get In Touch</h1>
+          <p class="text-xl text-gray-600">
+            Ready to create something bold? Contact us to discuss your next project.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="mb-16 p-8 bg-gray-50 border border-gray-200">
+          <h2 class="text-2xl font-bold uppercase mb-6">Contact Information</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-bold uppercase text-sm mb-2">Email</h3>
+              <a href="mailto:info@jojx.co" class="text-lg hover:opacity-70">
+                info@jojx.co
+              </a>
+            </div>
+
+            <div>
+              <h3 class="font-bold uppercase text-sm mb-2">Location</h3>
+              <p class="text-lg">Venice, California</p>
+            </div>
+
+            <div>
+              <h3 class="font-bold uppercase text-sm mb-2">Follow Us</h3>
+              <div class="flex gap-6">
+                <a href="https://instagram.com/jojx" target="_blank" rel="noopener noreferrer" class="hover:opacity-70">
+                  Instagram
+                </a>
+                <a href="https://vimeo.com/jojx" target="_blank" rel="noopener noreferrer" class="hover:opacity-70">
+                  Vimeo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block font-bold uppercase text-sm mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-black"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block font-bold uppercase text-sm mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-black"
+            />
+          </div>
+
+          <div>
+            <label for="company" class="block font-bold uppercase text-sm mb-2">Company</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-black"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block font-bold uppercase text-sm mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows={6}
+              required
+              class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-black resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full px-8 py-4 bg-black text-white font-bold uppercase hover:bg-gray-900 transition-colors"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <p class="text-sm text-gray-600 mt-4">
+          We'll get back to you as soon as possible. Thank you for reaching out!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
